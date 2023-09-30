@@ -9,11 +9,11 @@ resource "google_secret_manager_secret" "github_auth_token" {
   }
 
   labels = {
-    created-by = "terraform"
-    publisher  = "altissimo-hq"
-    terraform-module     = "terraform-google-cloudbuildv2-connection"
-    service    = "github"
-    type       = "oauth-token"
+    created-by       = "terraform"
+    publisher        = "altissimo-hq"
+    terraform-module = "terraform-google-cloudbuildv2-connection"
+    service          = "github"
+    type             = "oauth-token"
   }
 }
 
