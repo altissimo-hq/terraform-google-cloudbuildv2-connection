@@ -2,7 +2,7 @@
 resource "google_cloudbuildv2_connection" "github" {
   provider = google-beta
   project  = var.project
-  location = var.region
+  location = local.region
   name     = var.github_connection_name
 
   github_config {

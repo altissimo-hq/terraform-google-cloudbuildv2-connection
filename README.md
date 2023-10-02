@@ -25,6 +25,7 @@ No modules.
 | [google-beta_google_cloudbuildv2_repository.repositories](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_cloudbuildv2_repository) | resource |
 | [google_secret_manager_secret.github_auth_token](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/secret_manager_secret) | resource |
 | [google_secret_manager_secret_iam_member.clouduild_github_auth_token](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/secret_manager_secret_iam_member) | resource |
+| [google_client_config.current](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/client_config) | data source |
 | [google_project.project](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/project) | data source |
 | [google_secret_manager_secret_version.github_auth_token](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/secret_manager_secret_version) | data source |
 
@@ -39,7 +40,7 @@ No modules.
 | <a name="input_github_connection_name"></a> [github\_connection\_name](#input\_github\_connection\_name) | Name of the Cloud Build v2 Connection to GitHub | `string` | `"github"` | no |
 | <a name="input_oauth_token_secret"></a> [oauth\_token\_secret](#input\_oauth\_token\_secret) | Name of the GitHub OAuth Token Secret | `string` | `"github-token"` | no |
 | <a name="input_oauth_token_secret_version"></a> [oauth\_token\_secret\_version](#input\_oauth\_token\_secret\_version) | Secret Version ID of the GitHub OAuth Token | `string` | `"latest"` | no |
-| <a name="input_region"></a> [region](#input\_region) | Region of the Cloud Build v2 Connection to GitHub | `string` | `"us-central1"` | no |
+| <a name="input_region"></a> [region](#input\_region) | Region of the Cloud Build v2 Connection to GitHub | `string` | `""` | no |
 | <a name="input_repositories"></a> [repositories](#input\_repositories) | List of GitHub repositories to create Cloud Build v2 Repositories for | `list(string)` | `[]` | no |
 | <a name="input_secret_project"></a> [secret\_project](#input\_secret\_project) | Google Project ID in which the GitHub OAuth Token Secret is stored | `string` | `null` | no |
 

@@ -5,5 +5,7 @@ locals {
 
   # Project ID in which the GitHub OAuth Token Secret is stored
   secret_project = coalesce(var.secret_project, var.project)
+  # Use the provider region unless passed in as a variable
+  region = coalesce(var.region, data.google_client_config.current.region)
 
 }
