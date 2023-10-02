@@ -49,7 +49,7 @@ variable "project" {
 variable "region" {
   description = "Region of the Cloud Build v2 Connection to GitHub"
   type        = string
-  default     = "us-central1"
+  default     = ""
 }
 
 variable "repositories" {
