@@ -5,7 +5,7 @@ resource "google_secret_manager_secret" "github_auth_token" {
   secret_id = var.oauth_token_secret
 
   replication {
-    automatic = true
+    auto {}
   }
 
   labels = {
