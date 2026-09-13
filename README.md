@@ -44,7 +44,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_github_app_installation_id"></a> [github\_app\_installation\_id](#input\_github\_app\_installation\_id) | Installation ID for the Cloud Build GitHub App<br/><br/>For personal accounts, go to https://github.com/settings/installations<br/>and click on the Cloud Build app. Retrieve the installation ID from the URL.<br/><br/>For organization accounts, go to<br/>https://github.com/organizations/[ORGANIZATION]/settings/installations<br/>and click on the Cloud Build app. Retrieve the installation ID from the URL. | `number` | n/a | yes |
+| <a name="input_github_app_installation_id"></a> [github\_app\_installation\_id](#input\_github\_app\_installation\_id) | Installation ID for the Cloud Build GitHub App<br><br>For personal accounts, go to https://github.com/settings/installations<br>and click on the Cloud Build app. Retrieve the installation ID from the URL.<br><br>For organization accounts, go to<br>https://github.com/organizations/[ORGANIZATION]/settings/installations<br>and click on the Cloud Build app. Retrieve the installation ID from the URL. | `number` | n/a | yes |
 | <a name="input_github_login"></a> [github\_login](#input\_github\_login) | GitHub login of the user or organization that owns the repositories | `string` | n/a | yes |
 | <a name="input_project"></a> [project](#input\_project) | Google Project ID in which to create the Cloud Build resources | `string` | n/a | yes |
 | <a name="input_create_secret"></a> [create\_secret](#input\_create\_secret) | Whether to create the GitHub OAuth Token Secret | `bool` | `false` | no |
