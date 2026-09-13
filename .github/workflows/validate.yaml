@@ -1,0 +1,43 @@
+name: validate
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: '${{ github.workflow }}-${{ github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: 'terraform validate (google ${{ matrix.google_version }})'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        google_version: ['4.83.0', 'latest']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - name: Pin google provider version for this run
+        run: |
+          if [ "${{ matrix.google_version }}" = "latest" ]; then
+            CONSTRAINT="> 0"
+          else
+            CONSTRAINT="= ${{ matrix.google_version }}"
+          fi
+          cat > override.tf <<EOF
+          terraform {
+            required_providers {
+              google = {
+                source  = "hashicorp/google"
+                version = "${CONSTRAINT}"
+              }
+            }
+          }
+          EOF
+      - run: terraform fmt -check -recursive
+      - run: terraform init -backend=false
+      - run: terraform validate
