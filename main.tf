@@ -4,10 +4,6 @@ terraform {
       source  = "hashicorp/google"
       version = ">= 4.83.0"
     }
-    external = {
-      source  = "hashicorp/external"
-      version = ">= 2.2.0"
-    }
   }
 }
 
