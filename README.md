@@ -20,8 +20,8 @@ The repo contains a terraform module for creating a Google Cloud Build v2 Connec
 
 | Name | Version |
 |------|---------|
-| <a name="provider_google"></a> [google](#provider\_google) | 8.2.0 |
-| <a name="provider_google-beta"></a> [google-beta](#provider\_google-beta) | 8.2.0 |
+| <a name="provider_google"></a> [google](#provider\_google) | >= 4.83.0 |
+| <a name="provider_google-beta"></a> [google-beta](#provider\_google-beta) | n/a |
 
 ## Modules
 
