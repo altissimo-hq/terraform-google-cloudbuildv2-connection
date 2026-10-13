@@ -1,0 +1,25 @@
+# Describes this module to Backstage (https://backstage.altissimo.io), which
+# discovers it hourly. Same shape as altissimo-hq/backstage's catalog-info.yaml.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: terraform-google-cloudbuildv2-connection
+  namespace: altissimo
+  description: Creates a Google Cloud Build v2 GitHub Connection and Repositories
+  annotations:
+    github.com/project-slug: altissimo-hq/terraform-google-cloudbuildv2-connection
+    altissimo.io/terraform-registry: altissimo-hq/cloudbuildv2-connection/google
+  tags:
+    - cloudbuild
+    - google
+    - terraform
+    - terraform-modules
+  links:
+    - url: https://registry.terraform.io/modules/altissimo-hq/cloudbuildv2-connection/google/latest
+      title: Terraform Registry
+      icon: web
+spec:
+  type: terraform-module
+  lifecycle: production
+  owner: group:default/altissimo-agent
+  system: altissimo/terraform-modules
