@@ -13,13 +13,13 @@ The repo contains a terraform module for creating a Google Cloud Build v2 Connec
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_google"></a> [google](#requirement\_google) | >= 4.83.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_google"></a> [google](#provider\_google) | >= 4.83.0 |
 | <a name="provider_google-beta"></a> [google-beta](#provider\_google-beta) | n/a |
 
@@ -30,7 +30,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [google-beta_google_cloudbuildv2_connection.github](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_cloudbuildv2_connection) | resource |
 | [google-beta_google_cloudbuildv2_repository.repositories](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_cloudbuildv2_repository) | resource |
 | [google_secret_manager_secret.github_auth_token](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/secret_manager_secret) | resource |
@@ -42,7 +42,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_github_app_installation_id"></a> [github\_app\_installation\_id](#input\_github\_app\_installation\_id) | Installation ID for the Cloud Build GitHub App<br/><br/>For personal accounts, go to https://github.com/settings/installations<br/>and click on the Cloud Build app. Retrieve the installation ID from the URL.<br/><br/>For organization accounts, go to<br/>https://github.com/organizations/[ORGANIZATION]/settings/installations<br/>and click on the Cloud Build app. Retrieve the installation ID from the URL. | `number` | n/a | yes |
 | <a name="input_github_login"></a> [github\_login](#input\_github\_login) | GitHub login of the user or organization that owns the repositories | `string` | n/a | yes |
 | <a name="input_project"></a> [project](#input\_project) | Google Project ID in which to create the Cloud Build resources | `string` | n/a | yes |
@@ -57,7 +57,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_oauth_token_secret_version"></a> [oauth\_token\_secret\_version](#output\_oauth\_token\_secret\_version) | Secret Version ID of the GitHub OAuth Token |
 | <a name="output_repository_ids"></a> [repository\_ids](#output\_repository\_ids) | Map of Cloud Build v2 Repositories |
 
