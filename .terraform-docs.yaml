@@ -13,7 +13,7 @@ recursive:
 content: ""
 
 output:
-  file: ""
+  file: README.md
   mode: inject
   template: |-
     <!-- BEGIN_TF_DOCS -->
@@ -37,7 +37,7 @@ settings:
   hide-empty: false
   html: true
   indent: 2
-  lockfile: true
+  lockfile: false
   read-comments: true
   required: true
   sensitive: true

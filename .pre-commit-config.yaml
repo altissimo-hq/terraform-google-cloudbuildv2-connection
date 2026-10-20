@@ -7,7 +7,9 @@ repos:
     - id: check-yaml
     - id: check-added-large-files
 - repo: https://github.com/antonbabenko/pre-commit-terraform
-  rev: v1.77.1
+  rev: v1.107.0
   hooks:
     - id: terraform_fmt
     - id: terraform_docs
+      args:
+        - --args=--config=.terraform-docs.yaml
